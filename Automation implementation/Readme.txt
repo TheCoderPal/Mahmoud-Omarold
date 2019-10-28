@@ -27,6 +27,9 @@ Eclipse configuration
 3. Click on the "Add external JARs.." button on the right of the opened window
 4. add Client-combined-3.141.59 and Client-combined-3.141.59-sources and selenium-server-standalone-3.141.59
 
+
+5. change the workspace to be the file downloaded instabug challenge
+
 ========================================================================================
 to add testNG
 1. in eclipse click on help
