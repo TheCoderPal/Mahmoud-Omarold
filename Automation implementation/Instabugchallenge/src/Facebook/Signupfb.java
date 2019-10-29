@@ -1,3 +1,5 @@
+//this script is designed to fail with the wrong phone number as we can not sign up fake or specail accounts
+
 package Facebook;
 
 import org.openqa.selenium.By;
@@ -7,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.*;
+import pages.FacebookSIpage;
 
 public class Signupfb 
 {
@@ -25,39 +28,33 @@ public class Signupfb
 		driver.manage().window().maximize();
 	  
 		
-		By firstanme = By.id("u_0_m");
-		By surname = By.id("u_0_o");
-		By mobilenumber = By.id("u_0_r");
-		By passwordfield = By.id("u_0_y");
-		By dayfield = By.id("day");
-		By monthfield = By.id("month");
-		By yearfield = By.id("year");
-		By malechoice = By.id("u_0_7");
-		By femalechoice = By.id("u_0_9");
-		By customchoice = By.id("u_0_b");
-		By signupbtn = By.xpath(".//*[@id='u_0_15']");
+  
 	
+		FacebookSIpage.textbox_firstname(driver).sendKeys("insta");
+		FacebookSIpage.textbox_surname(driver).sendKeys("bug");
+		FacebookSIpage.textbox_mobilenumber(driver).sendKeys("01888477545");
+		FacebookSIpage.textbox_passwordsu(driver).sendKeys("verycomplexpassword");
 		
-		driver.findElement(firstanme).sendKeys("insta");
-		driver.findElement(surname).sendKeys("bug");
-		driver.findElement(mobilenumber).sendKeys("01888477545");
-		driver.findElement(passwordfield).sendKeys("verycomplexpassword");
+		FacebookSIpage.dropdown_day(driver).click();
 		
-		driver.findElement(monthfield).click();
-		Select selmon = new Select (driver.findElement(monthfield));
-		selmon.selectByIndex(1);
-		
-		driver.findElement(dayfield).click();
-		Select selday = new Select (driver.findElement(dayfield));
+		Select selday = new Select(FacebookSIpage.dropdown_day(driver));
 		selday.selectByIndex(22);
 		
-		driver.findElement(yearfield).click();
-		Select selyear = new Select (driver.findElement(yearfield));
-		selyear.selectByValue("1995");
+		FacebookSIpage.dropdown_month(driver).click();
 		
-		driver.findElement(malechoice).click();
+		Select selmon = new Select (FacebookSIpage.dropdown_month(driver));
+		selmon.selectByIndex(1);
 		
-		driver.findElement(signupbtn).click();
+		FacebookSIpage.dropdown_year(driver).click();
+		
+		
+		Select selyear = new Select (FacebookSIpage.dropdown_year(driver));
+		selyear.selectByValue("2006");
+		
+		FacebookSIpage.radiobutton_male(driver).click();
+		
+		FacebookSIpage.button_signup(driver).click();
+		
 		
 		
 		//assertion that error massage appeared

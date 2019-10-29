@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11798" started-at="2019-10-28T23:05:35 EET" finished-at="2019-10-28T23:05:47 EET">
+  <suite name="Default suite" duration-ms="9119" started-at="2019-10-29T13:49:39 EET" finished-at="2019-10-29T13:49:48 EET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11798" started-at="2019-10-28T23:05:35 EET" finished-at="2019-10-28T23:05:47 EET">
+    <test name="Default test" duration-ms="9119" started-at="2019-10-29T13:49:39 EET" finished-at="2019-10-29T13:49:48 EET">
       <class name="Facebook.Signupfb">
-        <test-method status="PASS" signature="signuptofacebook()[pri:0, instance:Facebook.Signupfb@78c03f1f]" name="signuptofacebook" duration-ms="11769" started-at="2019-10-28T23:05:35 EET" finished-at="2019-10-28T23:05:47 EET">
+        <test-method status="PASS" signature="signuptofacebook()[pri:0, instance:Facebook.Signupfb@78c03f1f]" name="signuptofacebook" duration-ms="9090" started-at="2019-10-29T13:49:39 EET" finished-at="2019-10-29T13:49:48 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signuptofacebook -->

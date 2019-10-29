@@ -6,6 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.*;
+import pages.FacebookSIpage;
 
 public class Loginfb 
 {
@@ -20,16 +21,15 @@ public class Loginfb
 		
 		driver.manage().window().maximize();
 		
-		By username = By.id("email");
-		By password = By.id("pass");
-		By login  =By.id("loginbutton");
-		By appmenue= By.id("appsNav");
+	
+		By appmenue = By.id("appsNav");
 		
-		
+		FacebookSIpage.textbox_email(driver).sendKeys("mahmoud_ynfssta_challenge@tfbnw.net");
+		FacebookSIpage.textbox_password(driver).sendKeys("mahmoudomarinstabug");
+		FacebookSIpage.button_login(driver).click();
 		//Mahmoud Omar Instabug Challenge
-		driver.findElement(username).sendKeys("mahmoud_ynfssta_challenge@tfbnw.net");
-		driver.findElement(password).sendKeys("mahmoudomarinstabug");
-		driver.findElement(login).click();
+		
+		System.out.println("===============================================");
 		System.out.println("Logged in succesfully");
 		
 		
@@ -37,14 +37,20 @@ public class Loginfb
 		boolean elememtexist= false;
 		if (driver.findElements(appmenue).isEmpty())
 		{
+			System.out.println("===============================================");
 			System.out.println("Failed TC");
+			System.out.println("===============================================");
 		}
 		else
 		{
+			System.out.println("===============================================");
 			System.out.println("Passed TC");
+			System.out.println("===============================================");
 			elememtexist= true;
 			
 		}
+		System.out.println("===============================================");
 		Assert.assertTrue(elememtexist);
+		System.out.println("===============================================");
   }
 }
