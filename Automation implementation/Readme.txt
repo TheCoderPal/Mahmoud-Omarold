@@ -1,5 +1,6 @@
 Description:
 using Selenium and TestNG I'm going to write two scripts to automate the login and sign up to facebook.
+I'm using POM page object mode, you can run the scripts from the Facebook packge.
 
 ========================================================================================
 
